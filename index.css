@@ -1,0 +1,227 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+@font-face{
+  font-family:"Travel Light Personal Use";
+  src:url("TYPO/travel_light/Travel Light Personal Use.ttf");
+  font-style:normal;
+  font-weight:normal;
+}
+
+nav:not(.nav){
+  width: 100%;
+  margin: 0 auto;
+  color: #D1705D;
+  top: 0px;
+  z-index:1000;
+  font-family: Avenir, sans-serif;
+  background-color: #EFEFEF;
+}
+
+nav{
+  font-family:sans-serif;
+}
+nav li a:visited{
+  color: #D1705D;
+}
+nav ul{
+  list-style-type: none;
+}
+
+nav ul li{
+  float: left;
+  text-align: center;
+  position: relative;
+}
+
+nav ul li:not(#recherche){
+  width: 10%;
+}
+.gauche li{
+  margin-top: 5px;
+  position:relative;
+  float: left;
+}
+#recherche{
+  width: 600%;
+  margin: 9px;
+  padding: 10px;
+  float: left;
+  border:0px;
+  color: #D1705D;
+  border-radius: 30px;
+  text-align:center;
+  outline: 2px solid #D1705D;
+}
+.droite li{
+  margin-top: 5px;
+  width:10%;
+  position:relative;
+  float: right;
+}
+nav ul::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+nav a,.deroulant{
+  display: block;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  padding: 10px 0px;
+}
+
+nav a:hover, .deroulant:hover{
+  color: grey;
+  border-bottom: 2px solid white;
+}
+
+.sous{
+  display: none;
+  box-shadow: 0px 1px 2px #CCC;
+  background-color: #F7C59F;
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav > ul li:hover .sous{
+  display: block;
+}
+
+.sous li{
+  float: none;
+  width: 100%;
+  text-align: left;
+}
+
+.sous a{
+  padding: 10px;
+  border-bottom: none;
+}
+
+.sous a:hover{
+  border-bottom: none;
+}
+
+.deroulant::after{
+  content:"▼";
+  font-size: 12px;
+}
+
+.bacgauche{
+  min-width:14%;
+  min-height: 100%;
+  left:0px;
+  z-index:0;
+  position:fixed;
+  background-image:url(images/bacgauche.png);
+  width:14%;
+  height: auto;
+  background-repeat: no-repeat;
+}
+.bacdroite{
+  min-width:14%;
+  min-height: 100%;
+  right:0px;
+  z-index:0;
+  position:fixed;
+  background-image:url(images/bacdroite.png);
+  width:14%;
+  height: auto;
+  background-repeat: no-repeat;
+}
+.corp{
+  background-color:white;
+  margin: auto;
+  width: 72%;
+}
+/*Fleche pour remonter haut de page*/
+#scrollUp
+{
+  position: fixed;
+  bottom : 10px;
+  right: -100px ;
+  opacity: 0.8;
+}
+/* Pour menu burger */
+#wrap {
+  font-size: 21px;
+  line-height: 1.6;
+  position: fixed;
+  top : 10px;
+  left: -100px ;
+  margin: 0;
+  display: flex;
+  color: #0f0;
+  /*annimation glissement du menu burger*/
+  transition: transform .4s cubic-bezier(.25, .1, .25, 1);
+}
+
+#wrap:not(:target) {
+  transform: translate3d(-335px, 0, 0);
+  background: transparent;
+}
+
+#wrap:target {
+  transform: translate3d(0, 0, 0);
+  background: rgba(0,0,0,0.5);
+}
+
+#open,
+#close {
+  height: 44px;
+  text-align: right;
+  display: block;
+  margin-right: -30px;
+}
+
+#wrap:target #open,
+#wrap:not(:target) #close {
+  display: none;
+}
+
+#wrap:target #open {
+  display: none;
+}
+
+.nav a {
+  color: #D1705D;
+  text-decoration: none;
+  display: block;
+}
+
+.header {
+  width: 360px;
+  padding: 0 20px;
+  display:inline-block;
+  vertical-align:top;
+}
+.nav {
+  padding: 25px;
+}
+/*Fin menu burger*/
+.div_cont{
+  margin:auto;
+  margin-top:40px;
+  padding: 30px;
+  text-align: center;
+}
+/*Mettre toutes les images à la même taille*/
+.div_cont img{
+  width: 40%;
+  height: auto;x
+}
+.div_cont h2{
+  font-family: "Travel Light Personal Use";
+  font-size: 2em;
+  font-weight:bold;
+  padding-bottom:10px;
+  padding-bottom:10px;
+}
+img:hover{
+  opacity:0.5;
+  overflow:visible;
+}

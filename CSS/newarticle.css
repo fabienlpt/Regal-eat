@@ -1,0 +1,60 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.image {
+  background-image: url("../images/inscription.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(5px);
+}
+.corp { 
+  color: #DDDDDD;
+  font-weight: bold;
+  position: absolute;
+  /* centre le bloc */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 7px;
+  text-align: center;
+  background-color: rgba(22,22,22,0.3);
+}
+#info{
+  font-weight: normal;
+  color:white;
+}
+.obligatoire:after{
+  font-weight: bold;
+  color:red;
+  content:"*";
+}
+span{
+  font-weight: bold;
+  color:red;
+}
+h1{
+  text-decoration: underline;
+}
+a{
+  color:#FFFFFF;
+}
+/*Mise en forme des différents champs d'entrée de connexion et d'inscription*/
+input:not(.boutons){
+  width: 250px;
+  padding: 10px 12px;
+  margin-bottom: 5px;
+  border: 1px solid #cccccc;
+  border-bottom-color: #fff;
+  border-right-color: #fff;
+  border-radius: 4px;
+  background: #e3e3e3;
+  color: #888;
+  text-align:center;
+}
+textarea{
+  resize:none;
+}
